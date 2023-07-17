@@ -56,3 +56,14 @@ const teamList = [
         profilePic: "img/barbara-ramos-graphic-designer.jpg",
     },
 ];
+
+// Procedimento:
+
+// MILESTONE 1:
+
+// Stampo attraverso la funzione console.log(nome variabile[key]) le chiavi e i valori di ogni singolo oggetto
+
+for (let key in teamList) {
+    console.log(teamList[key]);
+}
+
