@@ -5,10 +5,6 @@
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 // MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
-// BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva
-// BONUS 2:
 // Organizzare i singoli membri in card/schede
 
 // Procedimento:
@@ -23,37 +19,37 @@ const teamList = [
         firstName: "Wayne",
         lastName: "Barnett",
         role: "Founder & CEO",
-        profilePic: "img/wayne-barnett-founder-ceo.jpg",
+        img: "img/wayne-barnett-founder-ceo.jpg",
     },
     {
         firstName: "Angela",
         lastName: "Caroll",
         role: "Chief Editor",
-        profilePic: "img/angela-caroll-chief-editor.jpg",
+        img: "img/angela-caroll-chief-editor.jpg",
     },
     {
         firstName: "Walter",
         lastName: "Gordon",
         role: "Office Manage",
-        profilePic: "img/walter-gordon-office-manager.jpg",
+        img: "img/walter-gordon-office-manager.jpg",
     },
     {
         firstName: "Angela",
         lastName: "Lopez",
         role: "Social Media Manager",
-        profilePic: "img/angela-lopez-social-media-manager.jpg",
+        img: "img/angela-lopez-social-media-manager.jpg",
     },
     {
         firstName: "Scott",
         lastName: "Estrada",
         role: "Developer",
-        profilePic: "img/scott-estrada-developer.jpg",
+        img: "img/scott-estrada-developer.jpg",
     },
     {
         firstName: "Barbara",
         lastName: "Ramos",
         role: "Graphic Designer",
-        profilePic: "img/barbara-ramos-graphic-designer.jpg",
+        img: "img/barbara-ramos-graphic-designer.jpg",
     },
 ];
 
@@ -66,4 +62,29 @@ const teamList = [
 for (let key in teamList) {
     console.log(teamList[key]);
 }
+
+// Procedimento:
+
+// MILESTONE 2:
+
+//Creo le cards
+
+
+for (let i = 0; i <= teamList.length; i++) {
+    
+    const cards = document.getElementById("cards-container");
+    const memberCard = teamList[i];
+
+    //Stampo le cards all'interno del div con id ("cards-container") in html
+
+    cards.innerHTML +=
+    <img src="img/${memberCard.img}" class="card-img-top" alt="Member image">
+    <div class="card-body text-center">
+    <h3 class="card-title">${memberCard.firstName + " " + memberCard.lastName}</h3>
+    <h4 class="card-text">${memberCard.role}</h4>
+    </div>
+
+}
+
+
 
